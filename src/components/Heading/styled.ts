@@ -5,5 +5,6 @@ export const Container = styled.h2`
     font-size: ${theme.font.sizes.superLarge};
     margin: ${theme.spacings.large} 0;
     text-align: center;
+    color: ${theme.colors.white};
   `}
 `;

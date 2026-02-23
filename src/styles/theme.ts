@@ -8,6 +8,8 @@ export const theme = {
     darkGray: "#333333",
   },
   spacings: {
+    xxsmall: "0.2rem",
+    xsmall: "0.8rem",
     small: "1rem",
     medium: "2rem",
     large: "3rem",
