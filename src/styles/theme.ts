@@ -4,7 +4,7 @@ export const theme = {
     secondary: "#005b96",
     white: "#fafafa",
     lightGray: "#dddddd",
-    gray: "#999999",
+    gray: "#1C1C24",
     darkGray: "#333333",
   },
   spacings: {
@@ -15,6 +15,7 @@ export const theme = {
   font: {
     sizes: {
       small: "1.2rem",
+      normal: "1.6rem",
       medium: "1.8rem",
       large: "2rem",
       superLarge: "5rem",
