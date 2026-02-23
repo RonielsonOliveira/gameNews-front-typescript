@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev1": "cmd /c \"\"C:\\Program Files\\nodejs\\node.exe\" ./node_modules/next/dist/bin/next dev\"",
+    "build1": "cmd /c \"\"C:\\Program Files\\nodejs\\node.exe\" ./node_modules/next/dist/bin/next build\"",
+    "start1": "cmd /c \"\"C:\\Program Files\\nodejs\\node.exe\" ./node_modules/next/dist/bin/next start\"",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

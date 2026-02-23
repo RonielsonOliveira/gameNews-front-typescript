@@ -6,7 +6,10 @@ import { MainContainer } from "@/components/MainContainer";
 import { PostContainer } from "@/components/PostContainer";
 import { PostCover } from "@/components/PostCover";
 import { PostDetails } from "@/components/PostDetails";
+import { SITE_NAME } from "@/config/app-config";
 import { PostData } from "@/domain/posts/post";
+import { removeHtml } from "@/utils/remove-html";
+import Head from "next/head";
 
 export type PostProps = {
   post: PostData & { htmlContent: string };
@@ -16,6 +19,15 @@ export const Post = ({ post }: PostProps) => {
   console.log("Data" + post.createdAt);
   return (
     <>
+      <Head>
+        <title>
+          {post.title} - {SITE_NAME}
+        </title>
+        <meta
+          name="description"
+          content={removeHtml(post.htmlContent).slice(0, 150)}
+        />
+      </Head>
       <Header />
       <MainContainer>
         <Heading>{post.title}</Heading>
