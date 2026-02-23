@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cmd /c \"\"C:\\Program Files\\nodejs\\node.exe\" ./node_modules/next/dist/bin/next dev\"",
-    "build": "cmd /c \"\"C:\\Program Files\\nodejs\\node.exe\" ./node_modules/next/dist/bin/next build\"",
-    "start": "cmd /c \"\"C:\\Program Files\\nodejs\\node.exe\" ./node_modules/next/dist/bin/next start\"",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "deploy:static": "next build && next export",
     "lint": "eslint"
   },
   "dependencies": {
