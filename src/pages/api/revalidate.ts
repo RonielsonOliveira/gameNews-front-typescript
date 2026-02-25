@@ -10,7 +10,7 @@ export default async function handler(
 
   // segurança
   const secret = req.headers["x-webhook-secret"];
-  if (secret !== process.env.STRAPI_WEBHOOK_SECRET) {
+  if (secret !== process.env.WEBHOOK_SECRET) {
     return res.status(401).json({ message: "Invalid token" });
   }
 
