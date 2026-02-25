@@ -32,6 +32,9 @@ export const GlobalStyles = createGlobalStyle`
       opacity: .6;
     }
   }
+  link{
+    color:red;
+  }
 
 
 `;

@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactCompiler: true,
-  output: "export",
+
   images: {
     unoptimized: true,
   },
