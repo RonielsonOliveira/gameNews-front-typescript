@@ -21,9 +21,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     "",
   );
   const posts = await getAllPosts(urlQuery);
-  console.log(posts);
   return {
     props: { posts, category },
+    revalidate: 60,
   };
 };
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -32,7 +32,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: categories.map((category) => ({
       params: { category },
-      revalidate: 60,
     })),
     fallback: "blocking",
   };
