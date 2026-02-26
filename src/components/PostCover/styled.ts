@@ -1,8 +1,20 @@
 import styled, { css } from "styled-components";
 
-export const Container = styled.img`
+export const Wrapper = styled.div`
   ${({ theme }) => css`
-    max-width: 100%;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
     margin-bottom: ${theme.spacings.medium};
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   `}
+`;
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 `;

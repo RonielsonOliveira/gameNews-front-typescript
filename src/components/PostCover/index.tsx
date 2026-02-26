@@ -1,9 +1,13 @@
-import { Container } from "./styled";
+import { Image, Wrapper } from "./styled";
 export type PostCoverProps = {
   coverUrl: string;
   alt: string;
 };
 
 export const PostCover = ({ coverUrl, alt }: PostCoverProps) => {
-  return <Container src={coverUrl} alt={alt} />;
+  return (
+    <Wrapper>
+      <Image src={coverUrl} alt={alt} />
+    </Wrapper>
+  );
 };
