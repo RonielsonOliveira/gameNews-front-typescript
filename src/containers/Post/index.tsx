@@ -16,7 +16,11 @@ export type PostProps = {
 };
 
 export const Post = ({ post }: PostProps) => {
-  console.log("Data" + post.createdAt);
+  const cover =
+    post.cover.formats?.large?.url ||
+    post.cover.formats?.medium?.url ||
+    post.cover.formats?.small?.url ||
+    post.cover.url;
   return (
     <>
       <Head>
@@ -31,7 +35,7 @@ export const Post = ({ post }: PostProps) => {
       <Header />
       <MainContainer>
         <Heading>{post.title}</Heading>
-        <PostCover coverUrl={post.cover.formats.large.url} alt={post.title} />
+        <PostCover coverUrl={cover} alt={post.title} />
         <PostDetails
           author={post.author.name}
           category={post.category.name}
