@@ -1,4 +1,4 @@
-export const API_URL = "https://strapi-api-blog-1.onrender.com/api";
+export const API_URL = "https://strapiapiblog-production.up.railway.app/api";
 export const POSTS_URL = `${API_URL}/posts?populate=*`;
 
 export const SITE_NAME = "Ronielson Oliveira";
