@@ -5,11 +5,11 @@ export const Container = styled.header`
     background: ${theme.colors.primary};
     color: ${theme.colors.white};
     font-size: ${theme.font.sizes.large};
+
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height:;
+
     padding: ${theme.spacings.xxsmall};
   `}
 
@@ -18,14 +18,8 @@ export const Container = styled.header`
     align-items: center;
     justify-content: center;
     cursor: pointer;
-  }
-
-  img {
-    width: 140px;
-    height: 60px;
-    max-width: 100%;
-    object-fit: contain;
-    transition: transform 0.2s ease-in-out;
+    font-size: 25px;
+    padding: 4px;
   }
 
   a:hover img {

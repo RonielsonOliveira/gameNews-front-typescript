@@ -6,6 +6,7 @@ import { MainContainer } from "@/components/MainContainer";
 import { PostCard } from "@/components/PostCard";
 import { Footer } from "@/components/Footer";
 import { SITE_NAME } from "@/config/app-config";
+import { Menu } from "@/components/Menu";
 export type HomePageProps = {
   posts: PostData[];
   category?: string;
@@ -19,6 +20,7 @@ export default function HomePage({ posts, category }: HomePageProps) {
         <meta name="description" content="Este é o meu blog sobre jogos" />
       </Head>
       <Header />
+      <Menu />
       {category && (
         <Category>
           <a> Categoria: {category}</a>

@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Heading } from "@/components/Heading";
 import { MainContainer } from "@/components/MainContainer";
+import { Menu } from "@/components/Menu";
 import { PostContainer } from "@/components/PostContainer";
 import { PostCover } from "@/components/PostCover";
 import { PostDetails } from "@/components/PostDetails";
@@ -33,6 +34,7 @@ export const Post = ({ post }: PostProps) => {
         />
       </Head>
       <Header />
+      <Menu />
       <MainContainer>
         <Heading>{post.title}</Heading>
         <PostCover coverUrl={cover} alt={post.title} />

@@ -4,7 +4,7 @@ export const Container = styled.footer`
   ${({ theme }) => css`
     text-align: center;
     margin: ${theme.spacings.medium};
-    color: ${theme.colors.gray};
+    color: ${theme.colors.white};
     font-size: ${theme.font.sizes.small};
   `}
 `;
