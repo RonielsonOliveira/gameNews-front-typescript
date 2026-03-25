@@ -19,7 +19,6 @@ export default function HomePage({ posts, category }: HomePageProps) {
         <title>{SITE_NAME}</title>
         <meta name="description" content="Este é o meu blog sobre jogos" />
       </Head>
-      <Header />
       <Menu />
       {category && (
         <Category>

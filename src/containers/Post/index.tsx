@@ -33,7 +33,6 @@ export const Post = ({ post }: PostProps) => {
           content={removeHtml(post.htmlContent).slice(0, 150)}
         />
       </Head>
-      <Header />
       <Menu />
       <MainContainer>
         <Heading>{post.title}</Heading>

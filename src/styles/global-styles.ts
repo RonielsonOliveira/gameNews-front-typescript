@@ -19,18 +19,12 @@ export const GlobalStyles = createGlobalStyle`
   a{
     color: ${({ theme }) => theme.colors.white};
     text-decoration: none;
-    transition: opacity 300ms ease-in-out;
-    &:hover{
-      opacity: .6;
-    }
   }
    p{
     color: ${({ theme }) => theme.colors.white};
     text-decoration: none;
     transition: opacity 300ms ease-in-out;
-    &:hover{
-      opacity: .6;
-    }
+
   }
   link{
     color:red;
