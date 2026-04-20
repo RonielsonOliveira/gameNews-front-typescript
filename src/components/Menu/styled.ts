@@ -4,7 +4,20 @@ export const Container = styled.header`
   ${({ theme }) => css`
     background: ${theme.colors.primary};
     color: ${theme.colors.white};
-    font-size: ${theme.font.sizes.large};
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: ${theme.spacings.xxsmall};
+    position: relative;
+  `}
+`;
+export const InnerContainer = styled.div`
+  ${({ theme }) => css`
+    max-width: 96rem;
+    margin: 0 auto;
+    width: 100%;
 
     display: flex;
     align-items: center;
@@ -12,62 +25,94 @@ export const Container = styled.header`
 
     padding: ${theme.spacings.xxsmall};
   `}
-
-  a:hover img {
-    transform: scale(1.05);
-  }
 `;
 export const LogoWrapper = styled.div`
-  display: flex;
-
-  padding-left: 480px;
   img {
-    width: 140px;
-    height: 75px;
+    width: 120px;
+    height: 65px;
   }
 `;
+
+/* BOTÃO MOBILE */
+export const MobileButton = styled.button`
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: ${({ theme }) => theme.spacings.small};
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+/* MENU DESKTOP */
 export const CategoriesWrapper = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
   gap: ${({ theme }) => theme.spacings.xxsmall};
-  padding-right: 480px;
 
   a {
+    position: relative;
+    display: inline-block;
     color: ${({ theme }) => theme.colors.white};
     text-decoration: none;
-    transition: opacity 300ms ease-in-out;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    cursor: pointer;
     font-size: 25px;
     padding: 4px;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
+
+/* MENU MOBILE */
+export const MobileMenu = styled.div<{ isOpen: boolean }>`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+
+  a {
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+`;
+
 export const MenuLink = styled.div`
   position: relative;
-  margin: 0.3rem small 0;
-  text-decoration: none;
-  text-align: center;
-  &:hover {
-    &::after {
-      content: "";
-      position: absolute;
-      display: block;
-      height: 0.3rem;
-      background-color: ${({ color }) => color || "wheat"};
-      animation: hoverAnimation 0.2s forwards;
-    }
-    @keyframes hoverAnimation {
-      from {
-        width: 0;
-        left: 50%;
-      }
-      to {
-        width: 100%;
-        left: 0;
-      }
-    }
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    bottom: -4px;
+    left: 50%;
+    background-color: ${({ color }) => color || "white"};
+    transition: all 0.2s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+    left: 0;
   }
 `;

@@ -7,9 +7,7 @@ import Image from "next/image";
 export const Header = () => {
   return (
     <Container>
-      <Link href="/">
-        <Image src={Logo} alt="logo" priority />
-      </Link>
+      
     </Container>
   );
 };
