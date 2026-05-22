@@ -11,33 +11,39 @@ export type HomePageProps = {
   posts: PostData[];
   category?: string;
 };
-export default function HomePage({ posts, category }: HomePageProps) {
-  console.log(posts);
+export default function HomePage({ posts = [], category }: HomePageProps) {
   return (
     <>
       <Head>
         <title>{category ? `${category} - ${SITE_NAME}` : SITE_NAME}</title>
         <meta name="description" content="Este é o meu blog sobre jogos" />
       </Head>
+
       <Menu />
+
       {category && (
         <Category>
-          <a> Categoria: {category}</a>
+          <a>Categoria: {category}</a>
         </Category>
       )}
 
       <MainContainer>
         <Container>
-          {posts.map((post) => (
+          {posts?.map((post) => (
             <PostCard
               key={post.slug}
-              cover={post.cover.formats.small.url}
+              cover={
+                post.cover?.formats?.small?.url ||
+                post.cover?.url ||
+                "/images/fallback.png"
+              }
               slug={post.slug}
               title={post.title}
             />
           ))}
         </Container>
       </MainContainer>
+
       <Footer />
     </>
   );

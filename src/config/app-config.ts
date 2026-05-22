@@ -1,4 +1,5 @@
-export const API_URL = "https://strapiapiblog-production.up.railway.app/api";
+export const API_URL =
+  "https://strapiapiblog-production-8b68.up.railway.app/api";
 export const POSTS_URL = `${API_URL}/posts?populate=*`;
 
 export const SITE_NAME = "Game News";

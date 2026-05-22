@@ -17,15 +17,12 @@ export default async function handler(
   try {
     const { slug, category } = req.body;
 
-    // home
     await res.revalidate("/");
 
-    // página do post
     if (slug) {
       await res.revalidate(`/posts/${slug}`);
     }
 
-    // página da categoria
     if (category) {
       await res.revalidate(`/categories/${category}`);
     }
