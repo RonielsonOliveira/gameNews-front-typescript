@@ -10,8 +10,8 @@ import { GetStaticPaths, GetStaticProps } from "next";
 export type DynamicPostProps = {
   post: PostData & { htmlContent: string };
 };
+
 const DynamicPost = ({ post }: DynamicPostProps) => {
-  console.log("POST NO CLIENTE:", post);
   return <Post post={post} />;
 };
 
@@ -20,10 +20,6 @@ export default DynamicPost;
 export const getStaticPaths: GetStaticPaths = async () => {
   const numberOfPosts = await countAllPosts();
   const posts = await getAllPosts(`pagination[pageSize]=${numberOfPosts}`);
-  console.log(
-    "SLUGS GERADOS:",
-    posts.map((p) => p.slug),
-  );
   return {
     paths: posts.map((post) => {
       return {
@@ -38,6 +34,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const slug = ctx.params?.slug as string;
+
+  if (slug === "page") {
+    return {
+      notFound: true,
+    };
+  }
   const posts = await getPost(slug);
 
   if (!posts.length) {

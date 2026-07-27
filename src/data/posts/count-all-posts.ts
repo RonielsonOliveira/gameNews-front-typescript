@@ -9,8 +9,10 @@ type PostsResponse = {
   };
 };
 
-export const countAllPosts = async (): Promise<number> => {
-  const url = `${POSTS_URL}?pagination[pageSize]=1`;
+export const countAllPosts = async (query = ""): Promise<number> => {
+  const url = `${POSTS_URL}&pagination[pageSize]=1${query}`;
+
   const response = await fetchJson<PostsResponse>(url);
+
   return response.meta.pagination.total;
 };

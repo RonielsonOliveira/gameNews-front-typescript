@@ -18,8 +18,6 @@ export const getPost = async (slug: string | string[]): Promise<PostData[]> => {
   const jsonPosts = await fetchJson<PostResponse>(url.toString());
   const post = jsonPosts.data[0];
   const htmlContent = richTextToHtml(post.content);
-  console.log("CONTENT ORIGINAL:", post.content);
-
   const finalContent: PostData & { htmlContent: string } = {
     ...post,
     htmlContent,
