@@ -53,7 +53,7 @@ export default function HomePage({
             />
           ))}
         </Container>
-        <Pagination {...pagination} />
+        {pagination && <Pagination {...pagination} />}
         {!pagination?.nextPage && (
           <Link href="/post/page/[...param]" as="post/page/1" passHref>
             <AllPostLinks>Ver todos os posts</AllPostLinks>
