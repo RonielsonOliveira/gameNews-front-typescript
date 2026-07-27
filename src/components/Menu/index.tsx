@@ -51,10 +51,21 @@ export const Menu = () => {
 
         {/* MENU MOBILE */}
         <MobileMenu isOpen={isOpen}>
-          <Link href="/categories/Nintendo">Nintendo</Link>
-          <Link href="/categories/Pc">Pc</Link>
-          <Link href="/categories/Playstation">Playstation</Link>
-          <Link href="/categories/Xbox">Xbox</Link>
+          <Link href="/categories/Nintendo" onClick={() => setIsOpen(false)}>
+            Nintendo
+          </Link>
+
+          <Link href="/categories/Pc" onClick={() => setIsOpen(false)}>
+            Pc
+          </Link>
+
+          <Link href="/categories/Playstation" onClick={() => setIsOpen(false)}>
+            Playstation
+          </Link>
+
+          <Link href="/categories/Xbox" onClick={() => setIsOpen(false)}>
+            Xbox
+          </Link>
         </MobileMenu>
       </InnerContainer>
     </Container>

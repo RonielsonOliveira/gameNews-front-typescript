@@ -1,11 +1,20 @@
 export const theme = {
   colors: {
-    primary: "#010101",
-    secondary: "#005b96",
-    white: "#fafafa",
-    lightGray: "#dddddd",
-    gray: "#1C1C24",
-    darkGray: "#333333",
+    primary: "#7A2CF3", // Roxo principal
+    secondary: "#39FF14", // Verde neon
+    accent: "#27C8FF", // Azul ciano
+    white: "#F5F5F5",
+
+    background: "#0B0B10", // Fundo do site
+    surface: "#171720", // Cards
+    surfaceLight: "#232330",
+
+    border: "#34344A",
+
+    text: "#F5F5F5",
+    textSecondary: "#A7A7BC",
+
+    success: "#39FF14",
   },
   spacings: {
     xxsmall: "0.2rem",

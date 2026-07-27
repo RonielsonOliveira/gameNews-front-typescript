@@ -1,5 +1,12 @@
 import { Container } from "./styled";
 
 export const Footer = () => {
-  return <Container>Feito por Ronielson Oliveira</Container>;
+  return (
+    <Container>
+      <p>
+        <strong>Game News</strong> © {new Date().getFullYear()} — Notícias,
+        análises e novidades do universo dos games.
+      </p>
+    </Container>
+  );
 };
