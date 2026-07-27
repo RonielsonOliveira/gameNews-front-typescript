@@ -18,8 +18,8 @@ export const Container = styled.article`
     ${({ theme }) => css`
       width: 100%;
       overflow-x: auto;
-      background: ${theme.colors.lightGray};
-      color: ${theme.colors.darkGray};
+      background: ${theme.colors.background};
+      color: ${theme.colors.background};
       padding: ${theme.spacings.large};
       margin: ${theme.spacings.large} 0;
       line-height: 1.5;
