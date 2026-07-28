@@ -170,8 +170,8 @@ export const MenuLink = styled.div<MenuLinkProps>`
   `}
 `;
 
-export const MobileMenu = styled.div<{ isOpen: boolean }>`
-  ${({ isOpen, theme }) => css`
+export const MobileMenu = styled.div<{ isopen: boolean }>`
+  ${({ isopen, theme }) => css`
     position: absolute;
 
     top: 100%;
@@ -188,7 +188,7 @@ export const MobileMenu = styled.div<{ isOpen: boolean }>`
 
     overflow: hidden;
 
-    max-height: ${isOpen ? "420px" : "0"};
+    max-height: ${isopen ? "420px" : "0"};
 
     transition:
       max-height 0.35s ease,

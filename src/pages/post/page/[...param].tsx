@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     };
   }
   const category = ctx.params?.param?.[1] || "";
-  const postsPerPage = 3;
+  const postsPerPage = 4;
   const startFrom = (page - 1) * postsPerPage;
 
   const nextPage = page + 1;

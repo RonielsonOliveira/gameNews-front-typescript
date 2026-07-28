@@ -50,7 +50,7 @@ export const Menu = () => {
         </CategoriesWrapper>
 
         {/* MENU MOBILE */}
-        <MobileMenu isOpen={isOpen}>
+        <MobileMenu isopen={isOpen}>
           <Link href="/categories/Nintendo" onClick={() => setIsOpen(false)}>
             Nintendo
           </Link>
