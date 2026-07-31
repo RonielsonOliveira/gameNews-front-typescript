@@ -39,13 +39,14 @@ export const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
 
+  margin-top: 10px;
   a {
     display: flex;
     align-items: center;
   }
 
   img {
-    width: 125px;
+    width: 190px;
     height: auto;
 
     transition:
@@ -60,7 +61,7 @@ export const LogoWrapper = styled.div`
 
   @media (max-width: 768px) {
     img {
-      width: 140px;
+      width: 160px;
     }
   }
 `;

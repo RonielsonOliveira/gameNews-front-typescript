@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { PostCard, PostCardProps } from ".";
+import { PostCard } from ".";
 
 const meta: Meta<typeof PostCard> = {
   title: "Components/PostCard",
@@ -17,14 +17,11 @@ export default meta;
 type Story = StoryObj<typeof PostCard>;
 
 export const TypeScriptCover: Story = {
-  args: {
-    // coloque aqui as props do PostCard
-  },
+  args: {},
 };
 export const JavaScriptCover: Story = {
   args: {
     cover:
       "https://i.pinimg.com/736x/f9/81/9b/f9819bde416ba4e12513ff713e6c930c.jpg",
-    // coloque aqui as props do PostCard
   },
 };
