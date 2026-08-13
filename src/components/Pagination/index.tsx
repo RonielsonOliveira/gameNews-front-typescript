@@ -11,26 +11,31 @@ export const Pagination = ({
   previousPage,
   postsPerPage,
 }: PaginationProps) => {
-  const categoryName = category || "";
-  const nextLink = `/post/page/${nextPage}/${categoryName}`;
-  const previoustLink = `/post/page/${previousPage}/${categoryName}`;
+  const hasCategory = Boolean(category);
+
+  const nextLink = hasCategory
+    ? `/categories/${category}/page/${nextPage}`
+    : `/post/page/${nextPage}`;
+
+  const previousLink = hasCategory
+    ? `/categories/${category}/page/${previousPage}`
+    : `/post/page/${previousPage}`;
+
   const hasNextPage = nextPage * postsPerPage < postsPerPage + numberOfPosts;
+
   const hasPreviousPage = previousPage >= 1;
+
   return (
     <Container>
       {hasPreviousPage && (
         <PreviousLink>
-          <Link as={previoustLink} href="/post/page/[...param]" legacyBehavior>
-            <a>Previous</a>
-          </Link>
+          <Link href={previousLink}>Página Anterior</Link>
         </PreviousLink>
       )}
 
       {hasNextPage && (
         <NextLink>
-          <Link as={nextLink} href="/post/page/[...param]" legacyBehavior>
-            <a>Next</a>
-          </Link>
+          <Link href={nextLink}>Próxima Página</Link>
         </NextLink>
       )}
     </Container>

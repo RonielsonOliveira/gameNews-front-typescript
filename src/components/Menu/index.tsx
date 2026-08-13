@@ -36,34 +36,40 @@ export const Menu = () => {
         {/* MENU DESKTOP */}
         <CategoriesWrapper className="desktop">
           <MenuLink color="#E60012">
-            <Link href="/categories/Nintendo">Nintendo</Link>
+            <Link href="/categories/Nintendo/page/1">Nintendo</Link>
           </MenuLink>
           <MenuLink color="#0078F2">
-            <Link href="/categories/Pc">Pc</Link>
+            <Link href="/categories/Pc/page/1">Pc</Link>
           </MenuLink>
           <MenuLink color="#003791">
-            <Link href="/categories/Playstation">Playstation</Link>
+            <Link href="/categories/Playstation/page/1">Playstation</Link>
           </MenuLink>
           <MenuLink color="#107C10">
-            <Link href="/categories/Xbox">Xbox</Link>
+            <Link href="/categories/Xbox/page/1">Xbox</Link>
           </MenuLink>
         </CategoriesWrapper>
 
         {/* MENU MOBILE */}
         <MobileMenu isopen={isOpen}>
-          <Link href="/categories/Nintendo" onClick={() => setIsOpen(false)}>
+          <Link
+            href="/categories/Nintendo/page/1"
+            onClick={() => setIsOpen(false)}
+          >
             Nintendo
           </Link>
 
-          <Link href="/categories/Pc" onClick={() => setIsOpen(false)}>
+          <Link href="/categories/Pc/page/1" onClick={() => setIsOpen(false)}>
             Pc
           </Link>
 
-          <Link href="/categories/Playstation" onClick={() => setIsOpen(false)}>
+          <Link
+            href="/categories/Playstation/page/1"
+            onClick={() => setIsOpen(false)}
+          >
             Playstation
           </Link>
 
-          <Link href="/categories/Xbox" onClick={() => setIsOpen(false)}>
+          <Link href="/categories/Xbox/page/1" onClick={() => setIsOpen(false)}>
             Xbox
           </Link>
         </MobileMenu>

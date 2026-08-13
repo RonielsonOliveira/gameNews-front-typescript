@@ -11,14 +11,7 @@ export const PostDetails = ({ date, author, category }: PostDetailsProps) => {
   return (
     <Container>
       Publicado em <Date date={date} /> por {author} | {""}
-      <CategoryLink
-        href={{
-          pathname: "/post/page/[...param]",
-          query: {
-            param: ["1", category.toLowerCase()],
-          },
-        }}
-      >
+      <CategoryLink href={`/categories/${category.toLowerCase()}/page/1`}>
         {category}
       </CategoryLink>
     </Container>
