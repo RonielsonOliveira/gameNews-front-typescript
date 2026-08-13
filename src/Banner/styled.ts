@@ -8,9 +8,7 @@ export const Banner = styled.section`
 
     overflow: hidden;
     border-radius: 1.2rem;
-
     background: ${theme.colors.background};
-
     @media (max-width: 768px) {
       height: 360px;
     }
